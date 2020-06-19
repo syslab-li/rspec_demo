@@ -61,3 +61,21 @@ before_action :authenticate_user!
 $ cd app/javascript
 $ mkdir views components store routes
 ```
+
+# rspec
+```
+group :development, :test do
+  gem 'rspec-rails'
+  gem "factory_bot_rails"
+end
+
+➜  rspec_demo git:(master) ✗ bundle exec rails generate rspec:install
+Running via Spring preloader in process 85212
+      create  .rspec
+      create  spec
+      create  spec/spec_helper.rb
+      create  spec/rails_helper.rb
+
+$ bundle exec rspec
+
+```
