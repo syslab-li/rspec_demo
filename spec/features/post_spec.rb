@@ -39,10 +39,10 @@ describe 'トップページ', type: :feature do
 
       context "当人の投稿の場合" do
         before do
-          visit new_user_session_path
-          fill_in "user[email]", with: user_a.email
-          fill_in "user[password]", with: user_a.password
-          click_on 'Log in'
+          #visit new_user_session_path
+          #fill_in "user[email]", with: user_a.email
+          #fill_in "user[password]", with: user_a.password
+          #click_on 'Log in'
         end
 
         it "削除ボタンを押すと投稿が削除される" do
@@ -60,10 +60,10 @@ describe 'トップページ', type: :feature do
 
       context "当人の投稿ではない場合" do
         before do
-          visit new_user_session_path
-          fill_in "user[email]", with: user_b.email
-          fill_in "user[password]", with: user_b.password
-          click_on 'Log in'
+          #visit new_user_session_path
+          #fill_in "user[email]", with: user_b.email
+          #fill_in "user[password]", with: user_b.password
+          #click_on 'Log in'
         end
 
         it "フォローボタンを押すとフォローされる" do
