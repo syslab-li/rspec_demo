@@ -13,6 +13,7 @@ import PostDetailPage from 'PostDetailPage.vue'
 import PostNewPage from 'PostNewPage.vue'
 
 const router = new VueRouter({
+  mode: 'history',
   routes: [
     { path: '/',
       component: PostIndexPage  },

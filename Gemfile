@@ -43,6 +43,9 @@ group :development, :test do
   gem "factory_bot_rails"
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -57,15 +60,11 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-rbenv-install'
   gem 'capistrano3-puma'
-  gem 'pry-rails'
-  gem 'pry-byebug'
-  gem 'pry-doc'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem "rspec_junit_formatter"
-
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end

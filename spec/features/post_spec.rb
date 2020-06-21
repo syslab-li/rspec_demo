@@ -14,7 +14,8 @@ describe 'トップページ', type: :feature do
 
     it "表示されること" do
       expect(current_path).to eq new_user_session_path
-      #expect(page).to have_content("Go-En")
+      #binding.pry 
+      expect(page).to have_content("Log in")
     end
 
     it "トップページから商品詳細ページに遷移できる" do
@@ -40,9 +41,13 @@ describe 'トップページ', type: :feature do
       context "当人の投稿の場合" do
         before do
           #visit new_user_session_path
-          #fill_in "user[email]", with: user_a.email
-          #fill_in "user[password]", with: user_a.password
-          #click_on 'Log in'
+          fill_in "user[email]", with: user_a.email
+          fill_in "user[password]", with: user_a.password
+          click_on 'Log in'
+          #binding.pry 
+          save_and_open_page
+
+          expect(page).to have_content 'content'  
         end
 
         it "削除ボタンを押すと投稿が削除される" do
