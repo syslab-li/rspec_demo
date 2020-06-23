@@ -56,7 +56,7 @@ jobs:
       # Database setup
       #- run: bundle exec rake db:create
       #- run: bundle exec rake db:schema:load
-      - run: bundle exec db:migrate RAILS_ENV=test
+      - run: bundle exec rake db:migrate RAILS_ENV=test
 
 # rubocopを走らせる記述です。
       #- run:
